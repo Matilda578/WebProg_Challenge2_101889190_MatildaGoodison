@@ -1,0 +1,110 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="quiz.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id='header'>
+<h1>Pokemon Quiz!</h1>
+    </div>
+
+    <div id='question1'>
+<h2>What type of pokemon is Pikachu?</h2>
+<form type='radio', name="pikachu">
+    <input type="radio" id="Rabbit" name="pikachu" value="rabbit">
+    <label for="Rabbit">Rabbit</label><br>
+
+    <input type="radio" id="owl" name="pikachu" value="owl">
+    <label for="owl">Owl</label><br>
+
+    <input type="radio" id="Kitty" name="pikachu" value="kitty">
+    <label for="Kitty">Kitt Cat</label><br>
+
+    <input type="radio" id="Mouse" name="pikachu" value="mouse">
+    <label for="Mouse">Mouse</label>
+    <br>
+</form>
+    </div>
+    <div id="jiggly">
+<h2>What is Jigglypuff's favourite hobby?</h2>
+<form type='radio', name="jigglypuff">
+    <input type="radio" id="sing" name="jigglypuff" value="sing">
+    <label for="sing">Sing</label><br>
+
+    <input type="radio" id="dance" name="jigglypuff" value="dance">
+    <label for="dance">Dance</label><br>
+
+    <input type="radio" id="Read" name="jigglypuff" value="read">
+    <label for="Read">Read</label><br>
+
+    <input type="radio" id="shop" name="jigglypuff" value="shop">
+    <label for="shop">Shop</label>
+    <br>
+</div>
+</form>
+    
+    <input type="submit" value="Submit" onclick="btnClick()">
+    
+    <h3 id="Results">Results:</h3>
+
+
+
+<script>
+    var ans1 = "mouse";
+    var ans2= "sing";
+    var numCorrect = 0;
+    var numWrong = 0;
+
+
+
+
+    function btnClick() {
+    // get the radio buttons
+        const radioButtons = document.getElementsByName("pikachu",);
+        let selectedValue = "";
+
+        for (const button of radioButtons) {
+            if(button.checked == true) {
+                selectedValue = button.value;
+                break;
+            }
+        }
+
+        if(selectedValue === ans1) {
+            alert("correct");
+            numCorrect++;
+            console.log(numCorrect);
+
+        }
+         else {
+            alert("wrong");
+            numWrong++;
+        }
+        const jiggle = document.getElementsByName("jigglypuff",);
+        let jigglevalue = "";
+
+        for (const button of jiggle) {
+            if(button.checked == true) {
+                jigglevalue = button.value;
+                break;
+            }
+        }
+
+        if(jigglevalue === ans2) {
+            alert("correct");
+            numCorrect++;
+        } else {
+            alert("wrong");
+            numWrong++;
+            
+    
+        }
+        document.getElementById("Results").innerHTML = numCorrect;
+    }
+    
+</script>
+
+</body>
+</html>
