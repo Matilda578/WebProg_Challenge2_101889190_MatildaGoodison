@@ -18,6 +18,11 @@ html body {
     font-size: 90px;
 
   }
+
+ #header{
+
+ } 
+
  #question1 {
      text-align: center;
     border-radius: 25px;
@@ -108,3 +113,37 @@ html body {
    box-shadow: 10px 10px 5px #303030;
    margin: 70px;
  }
+ 
+ #finish{
+     text-align: center;
+     border-radius: 25px;
+   padding-top: 30px;
+padding-bottom: 30px;
+   border:  #405bf8;
+   margin: 70px;
+ }
+ #submit{
+    font-size: 50px;
+    line-height: 3;
+     width: 50%;
+     border-radius: 25px;
+     background-color: darkred;
+     color: ivory;
+     font-weight: bolder;
+     text-shadow: 2px 2px 5px black;
+
+ }
+
+ #submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: rgb(241, 41, 41);
+    font-style: italic;
+  }
+
+  h3{font-family: 'Itim', cursive;
+    text-align: center;
+    color: gold;
+    text-shadow: 2px 2px 5px black;
+    font-size: 70px;
+
+  }
