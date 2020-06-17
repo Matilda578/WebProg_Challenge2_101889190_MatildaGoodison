@@ -43,6 +43,61 @@
     <label for="shop">Shop</label>
     <br>
 </div>
+
+<div id="eev">
+    <h2>Which one of the following options is NOT one of Eevee's evolutions?</h2>
+
+    <form type='radio', name="eevee">
+        <input type="radio" id="sylveon" name="eevee" value="sylveon">
+        <label for="sylveon">Sylveon</label><br>
+    
+        <input type="radio" id="Jolteon" name="eevee" value="Jolteon">
+        <label for="Jolteon">Jolteon</label><br>
+    
+        <input type="radio" id="Blosseon" name="eevee" value="Blosseon">
+        <label for="Blosseon">Blosseon</label><br>
+    
+        <input type="radio" id="vaporeon" name="eevee" value="vaporeon">
+        <label for="vaporeon">Vaporeon</label>
+        <br>
+    </div>
+
+    <div id="lap">
+        <h2>Lapras evolves into?</h2>
+    
+        <form type='radio', name="lapras">
+            <input type="radio" id="lapradon" name="lapras" value="lapradon">
+            <label for="lapradon">Lapradon</label><br>
+        
+            <input type="radio" id="noev" name="lapras" value="noev">
+            <label for="noev">Lapras doesn't evolve</label><br>
+        
+            <input type="radio" id="giga" name="lapras" value="giga">
+            <label for="giga">Lapras can become a really big lapras through the process of Gigantamaxing</label><br>
+        
+            <input type="radio" id="laprodore" name="lapras" value="laprodore">
+            <label for="laprodore">Laprodore, a dog-like pokemon.</label>
+            <br>
+        </div>
+
+        <div id="mim">
+            <h2>What is Mimikyu?</h2>
+        
+            <form type='radio', name="mimic">
+                <input type="radio" id="puppet" name="mimic" value="puppet">
+                <label for="puppet">A puppet</label><br>
+            
+                <input type="radio" id="flop" name="mimic" value="flop">
+                <label for="flop">A really floppy Pikachu</label><br>
+            
+                <input type="radio" id="darkpik" name="mimic" value="darkpik">
+                <label for="darkpik">Pikachu's Dark form</label><br>
+            
+                <input type="radio" id="ghost" name="mimic" value="ghost">
+                <label for="ghost">A spooky ghost</label>
+                <br>
+            </div>
+
 </form>
     
     <input type="submit" value="Submit" onclick="btnClick()">
@@ -54,6 +109,9 @@
 <script>
     var ans1 = "mouse";
     var ans2= "sing";
+    var ans3 = "Blosseon"
+    var ans4 = "giga"
+    var ans5 = "ghost"
     var numCorrect = 0;
     var numWrong = 0;
 
@@ -101,6 +159,67 @@
             
     
         }
+
+        const laprass = document.getElementsByName("lapras",);
+        let lapvalue = "";
+
+        for (const button of laprass) {
+            if(button.checked == true) {
+                lapvalue = button.value;
+                break;
+            }
+        }
+
+        if(lapvalue === ans4) {
+            alert("correct");
+            numCorrect++;
+        } else {
+            alert("wrong");
+            numWrong++;
+        }
+
+        const ev = document.getElementsByName("eevee",);
+        let evalue = "";
+
+        for (const button of ev) {
+            if(button.checked == true) {
+                evalue = button.value;
+                break;
+            }
+        }
+
+        if(evalue === ans3) {
+            alert("correct");
+            numCorrect++;
+        } else {
+            alert("wrong");
+            numWrong++;
+        }
+
+
+        const mim = document.getElementsByName("mimic",);
+        let mimvalue = "";
+
+        for (const button of mim) {
+            if(button.checked == true) {
+                mimvalue = button.value;
+                break;
+            }
+        }
+
+        if(mimvalue === ans5) {
+            alert("correct");
+            numCorrect++;
+        } else {
+            alert("wrong");
+            numWrong++;
+        }
+
+
+
+
+        
+        
         document.getElementById("Results").innerHTML = numCorrect;
     }
     
