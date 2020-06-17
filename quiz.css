@@ -38,6 +38,8 @@ html body {
     float: left;
     width: 200px;
     height: 200px;
+    border-radius: 25px;
+    box-shadow: black;
   }
   
 
@@ -78,6 +80,28 @@ html body {
     text-align: center;
    border-radius: 25px;
    background: #a78457;
+   padding: 50px;
+   padding-left: 20%;
+   padding-right: 20%;
+   box-shadow: 10px 10px 5px #303030;
+   margin: 70px;
+ }
+
+ #lap {
+    text-align: center;
+   border-radius: 25px;
+   background: #00b7ff;
+   padding: 50px;
+   padding-left: 20%;
+   padding-right: 20%;
+   box-shadow: 10px 10px 5px #303030;
+   margin: 70px;
+ }
+
+ #mim {
+    text-align: center;
+   border-radius: 25px;
+   background: #ffc266;
    padding: 50px;
    padding-left: 20%;
    padding-right: 20%;
