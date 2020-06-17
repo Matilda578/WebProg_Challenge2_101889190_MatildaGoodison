@@ -3,20 +3,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="quiz.js"></script> -->
-    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat&display=swap" rel="stylesheet"> 
+    <title>Pokemon Quiz</title>
 </head>
 <body>
     <div id='header'>
-<h1>Pokemon Quiz!</h1>
+<h1>Pokemon Trivia Quiz!</h1>
     </div>
-
+  
     <div id='question1'>
 <h2>What type of pokemon is Pikachu?</h2>
-<form type='radio', name="pikachu">
-    <input type="radio" id="Rabbit" name="pikachu" value="rabbit">
+<form type='radio', name="pikachu"> 
+    <input type="radio" id="Rabbit" name="pikachu" value="rabbit"> <img src="https://cdn.bulbagarden.net/upload/b/b8/025Pikachu_LG.png" alt="pikachu">
     <label for="Rabbit">Rabbit</label><br>
-
-    <input type="radio" id="owl" name="pikachu" value="owl">
+    
+    <input type="radio" id="owl" name="pikachu" value="owl"> 
     <label for="owl">Owl</label><br>
 
     <input type="radio" id="Kitty" name="pikachu" value="kitty">
@@ -25,10 +29,11 @@
     <input type="radio" id="Mouse" name="pikachu" value="mouse">
     <label for="Mouse">Mouse</label>
     <br>
-</form>
+
     </div>
     <div id="jiggly">
 <h2>What is Jigglypuff's favourite hobby?</h2>
+<img src=https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png alt="jigglypuff">
 <form type='radio', name="jigglypuff">
     <input type="radio" id="sing" name="jigglypuff" value="sing">
     <label for="sing">Sing</label><br>
@@ -46,7 +51,7 @@
 
 <div id="eev">
     <h2>Which one of the following options is NOT one of Eevee's evolutions?</h2>
-
+<img id = eeve src=https://pbs.twimg.com/profile_images/734021801731346433/Is3_MQRB_400x400.jpg alt="eevee">
     <form type='radio', name="eevee">
         <input type="radio" id="sylveon" name="eevee" value="sylveon">
         <label for="sylveon">Sylveon</label><br>
@@ -100,7 +105,7 @@
 
 </form>
     
-    <input type="submit" value="Submit" onclick="btnClick()">
+    <input type="submit" value="Am I a Pokemon Master??" onclick="btnClick()">
     
     <h3 id="Results">Results:</h3>
 
@@ -119,7 +124,7 @@
 
 
     function btnClick() {
-    // get the radio buttons
+    
         const radioButtons = document.getElementsByName("pikachu",);
         let selectedValue = "";
 
@@ -214,13 +219,8 @@
             alert("wrong");
             numWrong++;
         }
-
-
-
-
         
-        
-        document.getElementById("Results").innerHTML = numCorrect;
+        document.getElementById("Results").innerHTML = numCorrect + " out of 5";
     }
     
 </script>
