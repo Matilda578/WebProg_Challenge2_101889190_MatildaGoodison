@@ -1,0 +1,271 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="quiz.js"></script> -->
+    <link rel="stylesheet" href="Pokemon%20Quiz_files/quiz.css">
+    <link href="Pokemon%20Quiz_files/css2.css" rel="stylesheet"> 
+    <link href="Pokemon%20Quiz_files/css2_002.css" rel="stylesheet"> 
+    <link href="Pokemon%20Quiz_files/css2_003.css" rel="stylesheet"> 
+    <title>Pokemon Quiz</title>
+</head>
+<body>
+    <div id="header">
+<h1>✨Pokemon Trivia Quiz!✨</h1>
+<p>⭐This quiz will test your knowledge...⭐</p>
+
+    </div>
+  
+    <div id="question1">
+<h2>What type of pokemon is Pikachu?</h2>
+<form type="radio" ,="" name="pikachu"> 
+    <input type="radio" id="Rabbit" name="pikachu" value="rabbit" checked="checked"> <img src="Pokemon%20Quiz_files/025Pikachu_LG.png" alt="pikachu">
+    <label for="Rabbit">Rabbit</label><br>
+    
+    <input type="radio" id="owl" name="pikachu" value="owl"> 
+    <label for="owl">Owl</label><br>
+
+    <input type="radio" id="Kitty" name="pikachu" value="kitty">
+    <label for="Kitty">Kitt Cat</label><br>
+
+    <input type="radio" id="Mouse" name="pikachu" value="mouse">
+    <label for="Mouse">Mouse</label>
+    <br>
+
+    </form></div>
+    <div id="jiggly">
+<h2>What is Jigglypuff's favourite hobby?</h2>
+<img src="Pokemon%20Quiz_files/039Jigglypuff.png" alt="jigglypuff">
+
+    <input type="radio" id="sing" name="jigglypuff" value="sing" checked="checked">
+    <label for="sing">Sing</label><br>
+
+    <input type="radio" id="dance" name="jigglypuff" value="dance">
+    <label for="dance">Dance</label><br>
+
+    <input type="radio" id="Read" name="jigglypuff" value="read">
+    <label for="Read">Read</label><br>
+
+    <input type="radio" id="shop" name="jigglypuff" value="shop">
+    <label for="shop">Shop</label>
+    <br>
+</div>
+
+<div id="eev">
+    <h2>Which one of the following options is NOT one of Eevee's evolutions?</h2>
+<img id="eeve" src="Pokemon%20Quiz_files/Is3_MQRB_400x400.jpg" alt="eevee">
+    
+        <input type="radio" id="sylveon" name="eevee" value="sylveon">
+        <label for="sylveon">Sylveon</label><br>
+    
+        <input type="radio" id="Jolteon" name="eevee" value="Jolteon" checked="checked">
+        <label for="Jolteon">Jolteon</label><br>
+    
+        <input type="radio" id="Blosseon" name="eevee" value="Blosseon">
+        <label for="Blosseon">Blosseon</label><br>
+    
+        <input type="radio" id="vaporeon" name="eevee" value="vaporeon">
+        <label for="vaporeon">Vaporeon</label>
+        <br>
+    </div>
+
+    <div id="lap">
+        <h2>Lapras evolves into?</h2>
+    <img id="laprp" src="Pokemon%20Quiz_files/source.gif" alt="lapras">
+        
+            <input type="radio" id="lapradon" name="lapras" value="lapradon">
+            <label for="lapradon">Lapradon</label><br>
+        
+            <input type="radio" id="noev" name="lapras" value="noev">
+            <label for="noev">Lapras doesn't evolve</label><br>
+        
+            <input type="radio" id="giga" name="lapras" value="giga" checked="checked">
+            <label for="giga">Lapras can become a really big lapras through the process of Gigantamaxing</label><br>
+        
+            <input type="radio" id="laprodore" name="lapras" value="laprodore">
+            <label for="laprodore">Laprodore, a dog-like pokemon.</label>
+            <br>
+        </div>
+
+        <div id="mim">
+            <h2>What is Mimikyu?</h2>
+        <img id="eeve" src="Pokemon%20Quiz_files/375px-778Mimikyu.png" alt="mimikyu">
+            
+                <input type="radio" id="puppet" name="mimic" value="puppet">
+                <label for="puppet">A puppet</label><br>
+            
+                <input type="radio" id="flop" name="mimic" value="flop">
+                <label for="flop">A really floppy Pikachu</label><br>
+            
+                <input type="radio" id="darkpik" name="mimic" value="darkpik">
+                <label for="darkpik">Pikachu's Dark form</label><br>
+            
+                <input type="radio" id="ghost" name="mimic" value="ghost" checked="checked">
+                <label for="ghost">A spooky ghost</label>
+                <br>
+            </div>
+
+
+<div id="finish">
+    
+    <input id="submit" type="submit" value="Am I a Pokemon Master??" onclick="btnClick()">
+    
+   <h3>Your Score:</h3>
+ <h3 id="Results">Are you a Pokemon Master?</h3>
+<img id="gifo" src="Pokemon%20Quiz_files/dbpgu36-af990ee9-323a-4b24-9fca-c396bf88533d.gif" alt="mimic">
+</div>
+
+
+<script>
+    var ans1 = "mouse";
+    var ans2= "sing";
+    var ans3 = "Blosseon"
+    var ans4 = "giga"
+    var ans5 = "ghost"
+    var numCorrect = 0;
+    var numWrong = 0;
+
+
+
+
+    function btnClick() {
+    
+        const radioButtons = document.getElementsByName("pikachu",);
+        let selectedValue = "";
+
+        for (const button of radioButtons) {
+            if(button.checked == true) {
+                selectedValue = button.value;
+                break;
+            }
+        }
+
+        if(selectedValue === ans1) {
+            // alert("correct");
+            numCorrect++;
+            console.log(numCorrect);
+
+        }
+         else {
+            // alert("wrong");
+            numWrong++;
+        }
+        const jiggle = document.getElementsByName("jigglypuff",);
+        let jigglevalue = "";
+
+        for (const button of jiggle) {
+            if(button.checked == true) {
+                jigglevalue = button.value;
+                break;
+            }
+        }
+
+        if(jigglevalue === ans2) {
+            // alert("correct");
+            numCorrect++;
+        } else {
+            // alert("wrong");
+            numWrong++;
+            
+    
+        }
+
+        const laprass = document.getElementsByName("lapras",);
+        let lapvalue = "";
+
+        for (const button of laprass) {
+            if(button.checked == true) {
+                lapvalue = button.value;
+                break;
+            }
+        }
+
+        if(lapvalue === ans4) {
+            // alert("correct");
+            numCorrect++;
+        } else {
+            // alert("wrong");
+            numWrong++;
+        }
+
+        const ev = document.getElementsByName("eevee",);
+        let evalue = "";
+
+        for (const button of ev) {
+            if(button.checked == true) {
+                evalue = button.value;
+                break;
+            }
+        }
+
+        if(evalue === ans3) {
+            // alert("correct");
+            numCorrect++;
+        } else {
+            // alert("wrong");
+            numWrong++;
+        }
+
+
+        const mim = document.getElementsByName("mimic",);
+        let mimvalue = "";
+
+        for (const button of mim) {
+            if(button.checked == true) {
+                mimvalue = button.value;
+                break;
+            }
+        }
+
+        if(mimvalue === ans5) {
+            // alert("correct");
+            numCorrect++;
+        } else {
+            // alert("wrong");
+            numWrong++;
+        }
+        
+        document.getElementById("Results").innerHTML = numCorrect + " out of 5";
+    }
+    
+</script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
