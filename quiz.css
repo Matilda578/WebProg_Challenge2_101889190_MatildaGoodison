@@ -68,7 +68,12 @@ html body {
     box-shadow: black;
   }
   
+#laprp{
+  float: right;
+   width: 500px;
+   height: 263px;
 
+}
  
 
   #jiggly {
